@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class PokemonFuego extends Pokemon implements Capturable{
     private String tipo="Fuego";
     private String efectivo="Planta";
@@ -14,5 +16,19 @@ public class PokemonFuego extends Pokemon implements Capturable{
 
     //TODO
     public boolean capturar() {
+        int r = randomInt();
+        if (r-getPs()>getDefensa()){
+            System.out.println(getNombre()+" CAPTURADO!");
+            return true;
+        }
+        else {
+            System.out.println(getNombre()+" NO CAPTURADO!");
+            return false;
+        }
+    }
+
+    public static int randomInt(){
+        Random r = new Random();
+        return r.nextInt((45-1)+1)+45;
     }
 }

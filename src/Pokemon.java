@@ -1,4 +1,4 @@
-public class Pokemon {
+public class Pokemon{
     private String nombre;
     private int ataque;
     private int defensa;
@@ -26,4 +26,6 @@ public class Pokemon {
     public int getPs() {return ps;}
 
     public void setPs(int ps) {this.ps = ps;}
+
+
 }
